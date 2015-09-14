@@ -1,0 +1,3 @@
+[submodule "typo3conf/ext/qxgo"]
+	path = typo3conf/ext/qxgo
+	url = https://github.com/chris-at-github/qinx-typo3-go.git
