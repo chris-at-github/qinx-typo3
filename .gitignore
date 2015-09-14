@@ -1,0 +1,8 @@
+/.idea
+/typo3
+/typo3temp
+/uploads
+/typo3conf/ext
+/typo3conf/l10n
+/fileadmin/user_upload
+/fileadmin/_temp_
