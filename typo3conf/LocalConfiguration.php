@@ -8,12 +8,12 @@ return array(
 		'versionNumberInFilename' => '0',
 	),
 	'DB' => array(
-		'database' => 'gutschein_company',
+		'database' => 'xxx',
 		'extTablesDefinitionScript' => 'extTables.php',
 		'host' => '127.0.0.1',
-		'password' => '',
+		'password' => 'xxx',
 		'port' => 3306,
-		'username' => 'root',
+		'username' => 'xxx',
 	),
 	'EXT' => array(
 		'extConf' => array(
