@@ -58,6 +58,7 @@ return array(
 		'systemLogLevel' => 2,
 		't3lib_cs_convMethod' => 'mbstring',
 		't3lib_cs_utils' => 'mbstring',
+		'textfile_ext' => 'txt,ts,html,htm,css,tmpl,js,sql,xml,csv,xlf,t3s,t3c',
 	),
 );
 ?>
