@@ -63,7 +63,7 @@ gulp.task('styles', function() {
 // Rerun the task when a file changes
 gulp.task('watch', function() {
   gulp.watch(paths.styles, ['styles']);
-  gulp.watch(paths.images, ['images']);
+  gulp.watch(paths.images, ['imagemin']);
 });
 
 // The default task (called when you run `gulp` from cli)
