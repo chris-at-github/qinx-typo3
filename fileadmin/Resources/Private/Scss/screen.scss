@@ -1,1 +1,13 @@
 @import '_qinx.scss';
+
+// Layout
+// ----------------------------------------------------------------------------------------------------------------
+#navigation-main {
+	.navigation {
+		@include clearfix();
+	}
+
+	ul {
+		float: right;
+	}
+}
