@@ -49,6 +49,14 @@ return array(
 		'loginSecurityLevel' => 'rsa',
 	),
 	'GFX' => array(
+		'colorspace' => 'sRGB',
+		'im' => 1,
+		'im_mask_temp_ext_gif' => 1,
+		'im_path' => 'C:/Program Files/ImageMagick/',
+		'im_path_lzw' => 'C:/Program Files/ImageMagick/',
+		'im_v5effects' => 1,
+		'im_version_5' => 'im6',
+		'image_processing' => 1,
 		'jpg_quality' => '80',
 	),
 	'SYS' => array(
