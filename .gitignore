@@ -10,3 +10,4 @@
 /typo3conf/AdditionalConfiguration.php
 /typo3conf/ENABLE_INSTALL_TOOL
 /node_modules
+/fileadmin/_processed_
