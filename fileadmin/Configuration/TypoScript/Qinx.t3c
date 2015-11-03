@@ -1,1 +1,2 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:qxgo/Configuration/TypoScript/Qinx.t3c">
+<INCLUDE_TYPOSCRIPT: source="DIR:fileadmin/Configuration/TypoScript/Extensions/" extensions="t3c">
