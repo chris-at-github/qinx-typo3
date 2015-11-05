@@ -37,17 +37,17 @@ gulp.task('imagemin', function() {
  gulp.task('scripts', function() {
  	gulp.src(paths.scripts)
  		.pipe(plumber())
- 		.pipe(strip())
+ 		//.pipe(strip())
  		.pipe(uglify())
  		.pipe(gulp.dest('./fileadmin/Resources/Public/Js'));
 
-	 gulp.src([
-		 './fileadmin/Resources/Private/Js/*.js'
-	 ])
-		 .pipe(plumber())
-		 .pipe(strip())
-		 .pipe(uglify())
-		 .pipe(gulp.dest('./fileadmin/Resources/Public/Js'));
+	 //gulp.src([
+		// './fileadmin/Resources/Private/Js/qinx.js'
+	 //])
+		// .pipe(plumber())
+		// .pipe(strip())
+		// .pipe(uglify())
+		// .pipe(gulp.dest('./fileadmin/Resources/Public/Js'));
  });
 
 // CSS concat and minify
