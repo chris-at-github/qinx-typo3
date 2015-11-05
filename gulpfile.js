@@ -20,8 +20,8 @@ var minify	= require('gulp-minify-css');
 
 // paths for watching
 var paths = {
-	styles: 	['./typo3conf/ext/qxgo/Resources/Private/Scss/*.scss', './fileadmin/Resources/Private/Scss/*.scss'],
-  scripts: 	[],
+	styles: 	['./typo3conf/ext/qxgo/Resources/Private/Scss/*.scss', './fileadmin/Resources/Private/Scss/*.scss', './fileadmin/Resources/Private/Scss/Extensions/*.scss'],
+  scripts: 	['./fileadmin/Resources/Private/Js/*.js'],
   images: 	'./fileadmin/Resources/Private/Images/*'
 };
 
@@ -34,22 +34,21 @@ gulp.task('imagemin', function() {
 });
 
 // JS concat, strip debugging and minify
-// gulp.task('scripts', function() {
-// //	gulp.src('src/js/app.js')
-// //		.pipe(plumber())
-// //		.pipe(browserify({
-// //			insertGlobals: true
-// //		}))
-// //		.pipe(uglify())
-// //		.pipe(gulp.dest('./js/'));
+ gulp.task('scripts', function() {
+ 	gulp.src(paths.scripts)
+ 		.pipe(plumber())
+ 		.pipe(strip())
+ 		.pipe(uglify())
+ 		.pipe(gulp.dest('./fileadmin/Resources/Public/Js'));
 
-// 	gulp.src(['./src/js/*.js'])
-// 		.pipe(plumber())
-// 		.pipe(concat('script.js'))
-// 		.pipe(stripDebug())
-// 		.pipe(uglify())
-// 		.pipe(gulp.dest('./js/'));
-// });
+	 gulp.src([
+		 './fileadmin/Resources/Private/Js/*.js'
+	 ])
+		 .pipe(plumber())
+		 .pipe(strip())
+		 .pipe(uglify())
+		 .pipe(gulp.dest('./fileadmin/Resources/Public/Js'));
+ });
 
 // CSS concat and minify
 gulp.task('styles', function() {
@@ -62,9 +61,10 @@ gulp.task('styles', function() {
 
 // Rerun the task when a file changes
 gulp.task('watch', function() {
-  gulp.watch(paths.styles, ['styles']);
+	gulp.watch(paths.styles, ['styles']);
+	gulp.watch(paths.scripts, ['scripts']);
   gulp.watch(paths.images, ['imagemin']);
 });
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['watch', 'styles', 'imagemin']);
+gulp.task('default', ['watch', 'styles', 'scripts', 'imagemin']);
