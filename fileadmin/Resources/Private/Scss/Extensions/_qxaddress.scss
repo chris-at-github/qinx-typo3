@@ -1,4 +1,8 @@
-.qx-address-map-container {
+.qx-address--map-container {
 	height: 350px;
 	background: $grey-light;
+}
+
+.qx-address--map-markers {
+	display: none;
 }
