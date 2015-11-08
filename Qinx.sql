@@ -1404,7 +1404,7 @@ INSERT INTO `sys_refindex` (`hash`, `tablename`, `recuid`, `field`, `flexpointer
 ('cb23e5221f6532e55498b9912a40ee26', 'be_groups', 1, 'TSconfig', '', 'TSconfig', 'fileadminReferences.2', -1, 0, 0, '_FILE', 0, 'fileadmin/Configuration/TsConfig/User.t3s'),
 ('d1657b650408849099784a78159bc058', 'sys_file', 4, 'storage', '', '', '', 0, 0, 0, 'sys_file_storage', 1, ''),
 ('de89fbc508d8a12d8425a113302ff5ed', 'sys_file_reference', 1, 'uid_local', '', '', '', 0, 0, 0, 'sys_file', 1, ''),
-('f3d4c48da7c3f3e66aa32520950fb2f8', 'be_users', 1, 'usergroup', '', '', '', 0, 0, 0, 'be_groups', 1, ''),
+('f3d4c48da7c3f3e66aa32520950fb2f8', 'be_users', 1, 'usergroup', '', '', '', 0, 0, 0, 'be_groups', 1, '');
 
 -- --------------------------------------------------------
 
