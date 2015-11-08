@@ -81,7 +81,7 @@ return array(
 		'clearCacheSystem' => FALSE,
 		'compat_version' => '6.2',
 		'devIPmask' => '',
-		'displayErrors' => 0,
+		'displayErrors' => '1',
 		'enableDeprecationLog' => FALSE,
 		'encryptionKey' => 'eff35eac083ef3e94dbab51ab5282b25eee879c5ac26a1b2233ccfd836f4bbc5c7e569ab1f0dd759f4da95f59f0190e3',
 		'isInitialInstallationInProgress' => FALSE,
