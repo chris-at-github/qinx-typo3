@@ -36,6 +36,7 @@ return array(
 			'perm' => 'a:0:{}',
 			'qxaddress' => 'a:0:{}',
 			'qxanz' => 'a:0:{}',
+			'qxgallery' => 'a:0:{}',
 			'qxgo' => 'a:0:{}',
 			'qxsurvey' => 'a:0:{}',
 			'realurl' => 'a:5:{s:10:"configFile";s:34:"typo3conf/RealurlConfiguration.php";s:14:"enableAutoConf";s:1:"0";s:14:"autoConfFormat";s:1:"0";s:12:"enableDevLog";s:1:"0";s:19:"enableChashUrlDebug";s:1:"0";}',
