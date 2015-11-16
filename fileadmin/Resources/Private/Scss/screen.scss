@@ -19,7 +19,44 @@ body {
 	}
 }
 
-#navigation-main, #navigation-footer {
+// Footer
+// ---------------------------------------------------------------------------------------------------------------------
+#footer {
+	& {
+		margin: 10px 0 0 0;
+	}
+
+	& > .inner {
+		padding: 10px 0 0 0;
+		border-top: 1px solid $grey-lighter;
+	}
+}
+
+#navigation-sitemap {
+	& {
+		margin: 0 -5px 10px -5px;
+	}
+
+	.navigation {
+		& > ul > li > a {
+			margin: 0 0 2px 0;
+			font-weight: 600;
+			color: $black;
+		}
+
+		& > ul > li > ul > li > a {
+			& {
+				color: $black;
+			}
+
+			&:hover, &:focus {
+				color: $color-brand;
+			}
+		}
+	}
+}
+
+#navigation-footer {
 	.navigation {
 		@include clearfix();
 	}
