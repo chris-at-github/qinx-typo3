@@ -35,19 +35,21 @@ gulp.task('imagemin', function() {
 
 // JS concat, strip debugging and minify
  gulp.task('scripts', function() {
- 	gulp.src(paths.scripts)
- 		.pipe(plumber())
- 		//.pipe(strip())
- 		.pipe(uglify())
- 		.pipe(gulp.dest('./fileadmin/Resources/Public/Js'));
+ 	//gulp.src(paths.scripts)
+ 	//	.pipe(plumber())
+ 	//	//.pipe(strip())
+ 	//	.pipe(uglify())
+ 	//	.pipe(gulp.dest('./fileadmin/Resources/Public/Js'));
 
-	 //gulp.src([
-		// './fileadmin/Resources/Private/Js/qinx.js'
-	 //])
-		// .pipe(plumber())
-		// .pipe(strip())
-		// .pipe(uglify())
-		// .pipe(gulp.dest('./fileadmin/Resources/Public/Js'));
+	 gulp.src([
+		 './fileadmin/Resources/Private/Js/slick.js',
+		 './fileadmin/Resources/Private/Js/qinx.application.js'
+	 ])
+		 .pipe(plumber())
+		 .pipe(concat('qinx.application.js'))
+		 .pipe(strip())
+		 .pipe(uglify())
+		 .pipe(gulp.dest('./fileadmin/Resources/Public/Js'));
  });
 
 // CSS concat and minify

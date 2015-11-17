@@ -9,4 +9,16 @@ $(function() {
 			qxSurveyMail.closest('form').trigger('submit');
 		}
 	});
+
+	// -------------------------------------------------------------------------------------------------------------------
+	// QxGallery
+	$('.qx-gallery--category-images').slick({
+		dots:          	true,
+		infinite:      	false,
+		speed:         	300,
+		slidesToShow:  	1,
+		variableWidth: 	true,
+		prevArrow:			'<div class="slick-prev">Previous</div>',
+		nextArrow: 			'<div class="slick-next">Next</div>'
+	});
 });
