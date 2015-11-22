@@ -53,6 +53,7 @@ return array(
 		'activateContentAdapter' => FALSE,
 		'debug' => FALSE,
 		'loginSecurityLevel' => 'rsa',
+		'pageNotFoundOnCHashError' => '0',
 	),
 	'GFX' => array(
 		'colorspace' => 'sRGB',
