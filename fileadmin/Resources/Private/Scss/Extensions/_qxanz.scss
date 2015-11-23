@@ -5,8 +5,21 @@
 	}
 
 	.anz-player--avatar {
-		float: left;
-		padding: 0 10px;
+		display: inline-block;
+		padding: 0 5px 0 0;
+		line-height: 23px;
 		border-right: 1px solid $grey-lighter;
+		vertical-align: top;
+	}
+
+	.anz-game--turn {
+		& {
+			display: inline-block;
+			padding: 0 0 0 5px;
+		}
+
+		#anz-game--turn-count {
+			width: 50px;
+		}
 	}
 }
