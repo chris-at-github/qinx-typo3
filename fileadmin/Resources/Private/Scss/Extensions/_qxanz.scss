@@ -1,4 +1,12 @@
 .anz-game--header {
-	padding: 10px 0;
-	border-bottom: 2px solid $grey-lighter;
+	& {
+		padding: 10px 0;
+		border-bottom: 2px solid $grey-lighter;
+	}
+
+	.anz-player--avatar {
+		float: left;
+		padding: 0 10px;
+		border-right: 1px solid $grey-lighter;
+	}
 }
