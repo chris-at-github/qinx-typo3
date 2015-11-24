@@ -21,4 +21,10 @@ $(function() {
 		prevArrow:			'<div class="slick-prev">Previous</div>',
 		nextArrow: 			'<div class="slick-next">Next</div>'
 	});
+
+	$('.qx-gallery--lightbox-link').colorbox({
+		title: function() {
+			return '1<br>2<br>3';
+		}
+	});
 });
