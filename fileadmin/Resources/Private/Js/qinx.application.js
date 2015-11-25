@@ -23,8 +23,26 @@ $(function() {
 	});
 
 	$('.qx-gallery--lightbox-link').colorbox({
+		maxWidth: '90%',
+		maxHeight: '90%',
+		current: null,
 		title: function() {
-			return '1<br>2<br>3';
+			var image	= $(this);
+			var title = '';
+
+			if(image.attr('title') !== '') {
+				title += '<div class=qx-gallery--lightbox-title-name">' + image.attr('title') + '</div>';
+			}
+
+			if(image.data('dimension') !== undefined) {
+				title += '<div class=qx-gallery--lightbox-title-dimension">' + image.data('dimension') + '</div>';
+			}
+
+			if(image.data('price') !== undefined) {
+				title += '<div class=qx-gallery--lightbox-title-price">' + image.data('price') + '</div>';
+			}
+
+			return title;
 		}
 	});
 });

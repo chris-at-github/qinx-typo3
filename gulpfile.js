@@ -47,7 +47,7 @@ gulp.task('imagemin', function() {
 	 ])
 		 .pipe(plumber())
 		 .pipe(concat('qinx.application.js'))
-		 .pipe(strip())
+		 //.pipe(strip())
 		 .pipe(uglify())
 		 .pipe(gulp.dest('./fileadmin/Resources/Public/Js'));
  });
