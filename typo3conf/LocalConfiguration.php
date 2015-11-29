@@ -36,6 +36,7 @@ return array(
 			'perm' => 'a:0:{}',
 			'qxaddress' => 'a:0:{}',
 			'qxanz' => 'a:0:{}',
+			'qxarticle' => 'a:0:{}',
 			'qxgallery' => 'a:0:{}',
 			'qxgo' => 'a:0:{}',
 			'qxsurvey' => 'a:0:{}',
