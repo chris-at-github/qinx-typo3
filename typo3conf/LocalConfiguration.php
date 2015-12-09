@@ -28,6 +28,8 @@ return [
             'extra_page_cm_options' => 'a:0:{}',
             'felogin' => 'a:0:{}',
             'filelist' => 'a:0:{}',
+            'fluidcontent' => 'a:0:{}',
+            'flux' => 'a:4:{s:9:"debugMode";s:1:"0";s:7:"compact";s:1:"0";s:17:"listNestedContent";s:1:"0";s:12:"handleErrors";s:1:"0";}',
             'func' => 'a:0:{}',
             'func_wizards' => 'a:0:{}',
             'info' => 'a:0:{}',
@@ -49,6 +51,7 @@ return [
             't3jquery' => 'a:14:{s:15:"alwaysIntegrate";s:1:"1";s:17:"integrateToFooter";s:1:"1";s:17:"enableStyleStatic";s:1:"0";s:18:"dontIntegrateOnUID";s:0:"";s:23:"dontIntegrateInRootline";s:0:"";s:13:"jqLibFilename";s:23:"jquery-###VERSION###.js";s:9:"configDir";s:29:"fileadmin/Resources/Public/Js";s:13:"jQueryVersion";s:5:"2.1.x";s:15:"jQueryUiVersion";s:6:"1.10.x";s:18:"jQueryTOOLSVersion";s:0:"";s:22:"jQueryBootstrapVersion";s:0:"";s:16:"integrateFromCDN";s:1:"0";s:11:"locationCDN";s:6:"jquery";s:13:"updateMessage";s:1:"0";}',
             'tstemplate' => 'a:0:{}',
             'tt_address' => 'a:2:{s:24:"disableCombinedNameField";s:1:"0";s:21:"backwardsCompatFormat";s:9:"%1$s %3$s";}',
+            'vhs' => 'a:0:{}',
         ],
     ],
     'FE' => [
