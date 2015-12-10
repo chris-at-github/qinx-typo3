@@ -29,7 +29,7 @@ return [
             'felogin' => 'a:0:{}',
             'filelist' => 'a:0:{}',
             'fluidcontent' => 'a:0:{}',
-            'flux' => 'a:4:{s:9:"debugMode";s:1:"0";s:7:"compact";s:1:"0";s:17:"listNestedContent";s:1:"0";s:12:"handleErrors";s:1:"0";}',
+            'flux' => 'a:4:{s:9:"debugMode";s:1:"2";s:7:"compact";s:1:"1";s:17:"listNestedContent";s:1:"0";s:12:"handleErrors";s:1:"0";}',
             'func' => 'a:0:{}',
             'func_wizards' => 'a:0:{}',
             'info' => 'a:0:{}',
