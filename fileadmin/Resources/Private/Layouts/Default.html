@@ -1,7 +1,11 @@
 <div id="header" class="outer">
-	<div class="inner">
+	<div class="inner container">
 		<div class="row">
-			<div id="logo" class="col-xs-12 col-sm-4"><f:cObject typoscriptObjectPath="lib.logo" /></div>
+			<div id="logo" class="col-xs-12 col-sm-2">
+				<f:cObject typoscriptObjectPath="lib.logo" />
+			</div>
+			<div class="col-xs-12 col-sm-10">
+				<f:cObject typoscriptObjectPath="navigation.main"/></div>
 		</div>
 	</div>
 </div>
@@ -10,11 +14,6 @@
 
 <div id="footer" class="outer">
 	<div class="inner">
-
-		<div id="navigation-sitemap">
-			<f:cObject typoscriptObjectPath="navigation.main"/>
-		</div>
-
 		<div class="row">
 			<div id="copyright" class="col-xs-12 col-sm-4"><f:cObject typoscriptObjectPath="lib.copyright" /></div>
 			<div id="navigation-footer" class="col-xs-12 col-sm-8"><f:cObject typoscriptObjectPath="navigation.footer" /></div>
