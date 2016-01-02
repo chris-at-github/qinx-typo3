@@ -37,10 +37,33 @@ body {
 }
 
 #navigation-main {
-	.navigation-horizontal {
-		& > ul > li {
-			a {
+	a {
+		& {
+			color: $grey;
+		}
 
+		&:hover, &:focus {
+			color: $grey-darker;
+		}
+	}
+
+	.navigation {
+		& > ul > li {
+			& > a {
+				line-height: 38px;
+				font-weight: 600;
+			}
+		}
+
+		& > ul > li > ul {
+			& {
+				top: 30px;
+			}
+
+			& > li {
+				& > a {
+					padding: 2px 5px;
+				}
 			}
 		}
 	}
