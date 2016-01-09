@@ -6,7 +6,7 @@
 
 page {
 	includeJSFooter {
-		application = {$folders.js}/qinx.application.js
+		application = {$folders.js}/qinx.package.js
 		application {
 			type = text/javascript
 		}

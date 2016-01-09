@@ -9,10 +9,10 @@ var changed		= require('gulp-changed');
 var imagemin	= require('gulp-imagemin');
 
 // include js plugins
-// var browserify	= require('gulp-browserify'); optional
+var webpack = require('webpack-stream');
 var concat	= require('gulp-concat');
 var strip		= require('gulp-strip-debug');
-var uglify	= require('gulp-uglify');
+//var uglify 	= require('gulp-uglify');
 
 // include css plugins
 var sass		= require('gulp-sass');
@@ -70,3 +70,15 @@ gulp.task('watch', function() {
 
 // The default task (called when you run `gulp` from cli)
 gulp.task('default', ['watch', 'styles', 'scripts', 'imagemin']);
+
+gulp.task('webpack', function() {
+	return gulp.src('./fileadmin/Resources/Private/Js/qinx.webpack.js')
+		.pipe(plumber())
+		.pipe(webpack({
+			output:  {
+				filename: 'qinx.package.js',
+			},
+			devtool: 'source-map'
+		}))
+		.pipe(gulp.dest('./fileadmin/Resources/Public/Js'));
+});
