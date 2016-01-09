@@ -21,7 +21,7 @@ var minify	= require('gulp-minify-css');
 // paths for watching
 var paths = {
 	styles: 	['./typo3conf/ext/qxgo/Resources/Private/Scss/*.scss', './fileadmin/Resources/Private/Scss/*.scss', './fileadmin/Resources/Private/Scss/Extensions/*.scss'],
-  scripts: 	['./fileadmin/Resources/Private/Js/*.js'],
+  scripts: 	['./fileadmin/Resources/Private/Js/*.js', './fileadmin/Resources/Private/Js/**/*.js'],
   images: 	'./fileadmin/Resources/Private/Images/*'
 };
 
@@ -48,9 +48,21 @@ gulp.task('imagemin', function() {
 		 .pipe(plumber())
 		 .pipe(concat('qinx.application.js'))
 		 //.pipe(strip())
-		 .pipe(uglify())
+		 //.pipe(uglify())
 		 .pipe(gulp.dest('./fileadmin/Resources/Public/Js'));
  });
+
+gulp.task('webpack', function() {
+	return gulp.src('./fileadmin/Resources/Private/Js/qinx.webpack.js')
+		.pipe(plumber())
+		.pipe(webpack({
+			output:  {
+				filename: 'qinx.package.js',
+			},
+			devtool: 'source-map'
+		}))
+		.pipe(gulp.dest('./fileadmin/Resources/Public/Js'));
+});
 
 // CSS concat and minify
 gulp.task('styles', function() {
@@ -64,21 +76,9 @@ gulp.task('styles', function() {
 // Rerun the task when a file changes
 gulp.task('watch', function() {
 	gulp.watch(paths.styles, ['styles']);
-	gulp.watch(paths.scripts, ['scripts']);
+	gulp.watch(paths.scripts, ['webpack']);
   gulp.watch(paths.images, ['imagemin']);
 });
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['watch', 'styles', 'scripts', 'imagemin']);
-
-gulp.task('webpack', function() {
-	return gulp.src('./fileadmin/Resources/Private/Js/qinx.webpack.js')
-		.pipe(plumber())
-		.pipe(webpack({
-			output:  {
-				filename: 'qinx.package.js',
-			},
-			devtool: 'source-map'
-		}))
-		.pipe(gulp.dest('./fileadmin/Resources/Public/Js'));
-});
+gulp.task('default', ['watch', 'styles', 'webpack', 'imagemin']);

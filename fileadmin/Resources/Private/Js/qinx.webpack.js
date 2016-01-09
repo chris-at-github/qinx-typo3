@@ -1,3 +1,3 @@
-var qinx = 'Qinx';
+var Navigation = require('./Plugins/navigation.js');
 
-console.log(qinx);
+console.log(Navigation(333));
