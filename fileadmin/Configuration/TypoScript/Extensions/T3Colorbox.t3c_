@@ -1,6 +1,0 @@
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3colorbox/Configuration/TypoScript/constants.txt">
-
-plugin.t3colorbox {
-	includejquerycore = 0
-	theme = 0
-}
