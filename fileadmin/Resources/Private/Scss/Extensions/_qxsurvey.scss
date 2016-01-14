@@ -1,0 +1,52 @@
+.qx-survey {
+	form {
+		position: relative;
+		min-height: 105px;
+		padding: 0 175px;
+	}
+
+	input[type='radio'], .button {
+		position: absolute;
+		top: 0;
+		left: 0;
+		visibility: hidden;
+	}
+
+	input[type='text'] {
+		margin: 25px 0;
+		padding: 5px 10px;
+		font-size: 20px;
+	}
+
+	.qx-survey--choices {
+		.form-item {
+			position: absolute;
+			top: 0;
+			width: 150px;
+			cursor: pointer;
+		}
+
+		.qx-survey--choice-batton {
+			left: 0;
+		}
+
+		.qx-survey--choice-pschorr {
+			right: 0;
+		}
+
+		.qx-survey--choice-count, .qx-survey--choice-name {
+			display: block;
+			text-align: center;
+			cursor: pointer;
+		}
+
+		.qx-survey--choice-count {
+			font-size: 36px;
+		}
+
+		.qx-survey--choice-name {
+			padding: 5px 0;
+			background: $grey-light;
+		}
+	}
+}

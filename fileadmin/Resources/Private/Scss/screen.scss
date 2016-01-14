@@ -4,11 +4,22 @@
 
 @import 'variables';
 @import 'qinx';
+@import 'slick';
+@import 'colorbox';
+
+@import 'Extensions/qxsurvey';
+@import 'Extensions/qxaddress';
+@import 'Extensions/qxgallery';
+@import 'Extensions/qxanz';
 
 
 // Layout
 // ---------------------------------------------------------------------------------------------------------------------
 body {
+	& {
+		background: $grey-light;
+	}
+
 	& > .csc-default, & > .outer {
 		& > .inner, & > .indent-normal {
 			max-width: 980px;
@@ -16,7 +27,60 @@ body {
 	}
 }
 
-#navigation-main, #navigation-footer {
+#logo {
+	a {
+		line-height: 38px;
+	}
+}
+
+// Container
+// ---------------------------------------------------------------------------------------------------------------------
+.container {
+	& {
+		padding: 5px 10px;
+		background: $white;
+	}
+}
+
+#navigation-main {
+	a {
+		& {
+			color: $grey;
+		}
+
+		&:hover, &:focus {
+			color: $grey-darker;
+		}
+	}
+
+	.navigation {
+		& > ul > li {
+			& > a {
+				line-height: 38px;
+				font-weight: 600;
+			}
+		}
+
+		& > ul > li > ul {
+			& {
+				top: 30px;
+			}
+
+			& > li {
+				& > a {
+					padding: 2px 5px;
+				}
+			}
+		}
+	}
+}
+
+// Footer
+// ---------------------------------------------------------------------------------------------------------------------
+#footer {
+}
+
+#navigation-footer {
 	.navigation {
 		@include clearfix();
 	}

@@ -1,0 +1,7 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:qxaddress/Configuration/TypoScript/constants.txt">
+
+plugin.tx_qxaddress {
+	persistence {
+		storagePid = 11
+	}
+}
