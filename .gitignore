@@ -11,3 +11,6 @@
 /typo3conf/ENABLE_INSTALL_TOOL
 /node_modules
 /fileadmin/_processed_
+/fileadmin/Resources/Public/Css/*.css
+/fileadmin/Resources/Public/Js/*.js
+/vendor
