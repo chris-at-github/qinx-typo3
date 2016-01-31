@@ -42,6 +42,21 @@ body {
 	}
 }
 
+// Layout (Fullscreen)
+// ---------------------------------------------------------------------------------------------------------------------
+body.page-fullscreen {
+	& {
+		margin: 0;
+	}
+
+	& > .csc-default, & > .outer {
+		& > .inner, & > .indent-normal {
+			max-width: inherit;
+			padding: 0 10px;
+		}
+	}
+}
+
 #navigation-main {
 	a {
 		& {
