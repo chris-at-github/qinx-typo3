@@ -52,7 +52,8 @@ body.page-fullscreen {
 	& > .csc-default, & > .outer {
 		& > .inner, & > .indent-normal {
 			max-width: inherit;
-			padding: 0 10px;
+			padding-left: 10px;
+			padding-right: 10px;
 		}
 	}
 }
