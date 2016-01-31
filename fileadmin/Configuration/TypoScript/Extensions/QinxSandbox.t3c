@@ -1,0 +1,7 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:qxsandbox/Configuration/TypoScript/constants.txt">
+
+plugin.tx_qxsandbox_frontend {
+	persistence {
+		storagePid = 21
+	}
+}
