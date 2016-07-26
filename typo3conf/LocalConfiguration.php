@@ -22,7 +22,7 @@ return [
             'adodb' => 'a:0:{}',
             'belog' => 'a:0:{}',
             'beuser' => 'a:0:{}',
-            'css_styled_content' => 'a:2:{s:15:"setPageTSconfig";s:1:"1";s:19:"removePositionTypes";s:1:"1";}',
+            'css_styled_content' => 'a:3:{s:32:"loadContentElementWizardTsConfig";s:1:"1";s:15:"setPageTSconfig";s:1:"1";s:19:"removePositionTypes";s:1:"1";}',
             'dbal' => 'a:2:{s:10:"sql_query.";a:1:{s:11:"passthrough";s:1:"1";}s:13:"Compatibility";s:0:"";}',
             'extension_builder' => 'a:3:{s:15:"enableRoundtrip";s:0:"";s:15:"backupExtension";s:1:"1";s:9:"backupDir";s:35:"uploads/tx_extensionbuilder/backups";}',
             'extra_page_cm_options' => 'a:0:{}',
