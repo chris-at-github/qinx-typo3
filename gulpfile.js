@@ -3,6 +3,8 @@ var gulp = require('gulp');
 
 // include error handling plugins
 var plumber = require('gulp-plumber');
+var notify = require('gulp-notify');
+var util = require('gulp-util');
 
 // include js plugins
 var webpack = require('webpack-stream');
@@ -23,6 +25,17 @@ var timestamp = Math.round(Date.now() / 1000);
 var svgmin = require('gulp-svgmin');
 var svgsprite = require('gulp-svg-sprite');
 
+// Error handler for plumber.
+var onError = function(err) {
+	console.log('Error occurred: ' + err.message);
+	notify({
+		title: 'Shit happens',
+		message:  'See console for details!'
+	});
+	util.beep();
+	this.emit('end');
+};
+
 // paths for watching
 var folders = {
 	source: {
@@ -41,35 +54,57 @@ var folders = {
 
 gulp.task('webpack', function() {
 	return gulp.src('./fileadmin/Resources/Private/Js/qinx.js')
-		.pipe(plumber())
+		.pipe(plumber({
+			errorHandler: onError
+		}))
 		.pipe(webpack(require('./webpack.config.js')))
-		.pipe(gulp.dest(folders.target.js));
+		.pipe(gulp.dest(folders.target.js))
+		.pipe(notify({
+			message: 'Webpack Ready',
+			onLast:  true
+		}));
 });
 
 // CSS concat and minify
 gulp.task('scss', function() {
 	gulp.src(folders.source.scss)
-		.pipe(plumber())
+		.pipe(plumber({
+			errorHandler: onError
+		}))
 		.pipe(sourcemap.init())
 		.pipe(sass())
 		.pipe(postcss([autoprefixer({browsers: ['last 2 versions']})]))
 		.pipe(cssnano())
 		.pipe(sourcemap.write('.'))
-		.pipe(gulp.dest(folders.target.css));
+		.pipe(gulp.dest(folders.target.css))
+		.pipe(notify({
+			message: 'Scss Ready',
+			onLast:  true
+		}));
 });
 
 gulp.task('svg-optimize', function() {
 	gulp.src(folders.source.svg + '/Raw/*.svg')
+		.pipe(plumber({
+			errorHandler: onError
+		}))
 		.pipe(svgmin({
 			js2svg: {
 				pretty: true
 			}
 		}))
-		.pipe(gulp.dest(folders.source.svg + '/Optimized/'));
+		.pipe(gulp.dest(folders.source.svg + '/Optimized/'))
+		.pipe(notify({
+			message: 'Svg Optimize Ready',
+			onLast:  true
+		}));
 });
 
 gulp.task('svg-sprite', ['svg-optimize'], function() {
 	gulp.src(folders.source.svg + '/Optimized/*.svg')
+		.pipe(plumber({
+			errorHandler: onError
+		}))
 		.pipe(svgsprite({
 			shape:     {
 				dimension: {
@@ -92,11 +127,18 @@ gulp.task('svg-sprite', ['svg-optimize'], function() {
 				mapname: 'icons'
 			}
 		}))
-		.pipe(gulp.dest(folders.target.image));
+		.pipe(gulp.dest(folders.target.image))
+		.pipe(notify({
+			message: 'Svg Sprite Ready',
+			onLast:  true
+		}));
 });
 
 gulp.task('iconfont', ['svg-optimize'], function() {
 	return gulp.src(folders.source.svg + '/Optimized/*.svg')
+		.pipe(plumber({
+			errorHandler: onError
+		}))
 		.pipe(iconfont({
 			fontName:         'icons', // required,
 			normalize:				true,
@@ -114,7 +156,11 @@ gulp.task('iconfont', ['svg-optimize'], function() {
 				}))
 				.pipe(gulp.dest('./fileadmin/Resources/Private/Scss/'))
 		})
-		.pipe(gulp.dest(folders.target.font));
+		.pipe(gulp.dest(folders.target.font))
+		.pipe(notify({
+			message: 'Iconfont Ready',
+			onLast:  true
+		}));
 });
 
 // Rerun the task when a file changes
