@@ -1,0 +1,100 @@
+config {
+	// Administrator settings
+	debug = {$config.debug}
+	no_cache = {$config.no_cache}
+	admPanel = {$config.adminPanel}
+
+	doctype = html5
+	noPageTitle = 2
+	htmlTag_setParams = none
+
+	// Character sets
+	renderCharset = utf-8
+	metaCharset = utf-8
+
+	// Cache settings
+	cache_period = 43200
+	sendCacheHeaders = 1
+
+	// URL Settings
+	tx_realurl_enable = 1
+	simulateStaticDocuments = 0
+
+	// Language Settings
+	uniqueLinkVars = 1
+	linkVars = L(1)
+	sys_language_uid = 0
+	sys_language_overlay = 1
+	sys_language_mode = content_fallback
+	language = de
+	locale_all = de_DE.UTF-8
+	htmlTag_setParams = lang="de"
+
+	// Link settings
+	absRefPrefix = {$config.absRefPrefix}
+	prefixLocalAnchors = 0
+
+	// Targets for links
+	intTarget =
+	extTarget = _blank
+	fileTarget = _blank
+
+	// Indexed Search
+	index_enable = 1
+	index_externals = 1
+
+	// Code cleaning
+	disablePrefixComment = 1
+
+	// Compression
+	compressJs = 0
+	compressCss = 0
+
+	// Move default CSS and JS to external file
+	removeDefaultJS = external
+	inlineStyle2TempFile = 0
+
+	// Protect mail addresses from spamming
+	spamProtectEmailAddresses = 0
+	spamProtectEmailAddresses_atSubst = @<span style="display:none;">remove-this.</span>
+
+	// display error messages for development
+	contentObjectExceptionHandler = 0
+}
+
+lib.content < styles.content.get
+
+page = PAGE
+page {
+	cssInline {
+		10 = FILE
+		10.file = {$folders.css}/newsletter.css
+	}
+
+	10 = CASE
+	10 {
+		key.field = layout
+
+		# 1 = FLUIDTEMPLATE
+		# 1 {
+		#  file = {$default.ext.templates}Blank.html
+		# }
+
+		default = FLUIDTEMPLATE
+		default {
+			file = {$folders.templates}/Newsletter.html
+
+			layoutRootPaths {
+				10 = {$folders.layouts}
+			}
+
+			templateRootPaths {
+				10 = {$folders.templates}
+			}
+
+			partialRootPaths {
+				10 = {$folders.partials}
+			}
+		}
+	}
+}
