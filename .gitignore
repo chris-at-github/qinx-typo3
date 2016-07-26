@@ -12,5 +12,10 @@
 /node_modules
 /fileadmin/_processed_
 /fileadmin/Resources/Public/Css/*.css
+/fileadmin/Resources/Public/Css/*.map
 /fileadmin/Resources/Public/Js/*.js
+/fileadmin/Resources/Public/Fonts/icons.eot
+/fileadmin/Resources/Public/Fonts/icons.svg
+/fileadmin/Resources/Public/Fonts/icons.ttf
+/fileadmin/Resources/Public/Fonts/icons.woff
 /vendor
