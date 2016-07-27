@@ -38,22 +38,6 @@ body {
 	}
 }
 
-// Layout (Fullscreen)
-// ---------------------------------------------------------------------------------------------------------------------
-body.page-fullscreen {
-	& {
-		margin: 0;
-	}
-
-	& > .csc-default, & > .outer {
-		& > .inner, & > .indent-normal {
-			max-width: inherit;
-			padding-left: 10px;
-			padding-right: 10px;
-		}
-	}
-}
-
 // Navigation
 // ---------------------------------------------------------------------------------------------------------------------
 #navigation-main {
@@ -63,7 +47,7 @@ body.page-fullscreen {
 		}
 
 		&:hover, &:focus {
-			color: $grey-darker;
+			color: $grey-dark;
 		}
 	}
 
