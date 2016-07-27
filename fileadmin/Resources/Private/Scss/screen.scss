@@ -24,8 +24,14 @@ body {
 }
 
 .outer {
-	max-width: 1180px;
-	margin: 0 auto;
+	& {
+		max-width: 1180px;
+		margin: 0 auto;
+	}
+
+	&.outer--lining {
+		margin-bottom: 4px;
+	}
 }
 
 .inner {
