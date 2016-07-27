@@ -3,35 +3,38 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
 
 @import 'variables';
-@import 'qinx';
+@import 'scaffolding';
 @import 'icons';
+
+@import 'Qinx/grid';
+@import 'Qinx/form';
+@import 'Qinx/navigation';
+@import 'Qinx/scaffolding';
+@import 'Qinx/csc';
+@import 'Qinx/helper';
+@import 'Qinx/structure';
+@import 'Qinx/message';
+@import 'Qinx/list';
 
 // Layout
 // ---------------------------------------------------------------------------------------------------------------------
 body {
-	& {
-		background: $grey-light;
-	}
+	margin: 0;
+	background: $grey-light;
+}
 
-	& > .csc-default, & > .outer {
-		& > .inner, & > .indent-normal {
-			max-width: 980px;
-		}
-	}
+.outer {
+	max-width: 1180px;
+	margin: 0 auto;
+}
+
+.inner {
+	background: $white;
 }
 
 #logo {
 	a {
 		line-height: 38px;
-	}
-}
-
-// Container
-// ---------------------------------------------------------------------------------------------------------------------
-.container {
-	& {
-		padding: 5px 10px;
-		background: $white;
 	}
 }
 
