@@ -100,6 +100,7 @@ gulp.task('svg-optimize', function() {
 		}));
 });
 
+
 gulp.task('svg-sprite', ['svg-optimize'], function() {
 	gulp.src(folders.source.svg + '/Optimized/*.svg')
 		.pipe(plumber({
@@ -122,6 +123,8 @@ gulp.task('svg-sprite', ['svg-optimize'], function() {
 					// example: true,
 					dest: '.',
 					render		: {
+
+						// @see: https://www.liquidlight.co.uk/blog/article/creating-svg-sprites-using-gulp-and-sass/
 						scss: {
 							dest: "_sprite.scss",
 							template: "./fileadmin/Resources/Private/Build/template.scss"
