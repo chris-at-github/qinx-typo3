@@ -107,10 +107,10 @@ gulp.task('svg-sprite', ['svg-optimize'], function() {
 		}))
 		.pipe(svgsprite({
 			shape:     {
-				dimension: {
-					maxWidth:  32,
-					maxHeight: 32,
-				},
+				// dimension: {
+				// 	maxWidth: 100,
+				// 	maxHeight: 100
+				// },
 				spacing:   {
 					padding: 0
 				}
@@ -120,7 +120,17 @@ gulp.task('svg-sprite', ['svg-optimize'], function() {
 					sprite: './icons.svg',
 					layout: 'packed',
 					// example: true,
-					dest:   '.'
+					dest: '.',
+					render		: {
+						scss: {
+							dest: "_sprite.scss",
+							template: "./fileadmin/Resources/Private/Build/template.scss"
+						},
+						json: {
+							dest: "_sprite.json",
+							template: "./fileadmin/Resources/Private/Build/template.json"
+						}
+					}
 				}
 			},
 			variables: {
