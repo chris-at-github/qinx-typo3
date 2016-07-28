@@ -38,9 +38,17 @@ body {
 	background: $white;
 }
 
+// Header
+// ---------------------------------------------------------------------------------------------------------------------
+#header {
+	.inner + .inner {
+		margin-top: 2px;
+	}
+}
+
 #logo {
 	a {
-		line-height: 38px;
+		line-height: 64px;
 	}
 }
 

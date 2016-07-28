@@ -1,11 +1,40 @@
 <div id="header" class="outer outer--lining">
-	<div class="inner container">
+	<div class="inner">
 		<div class="row">
 			<div id="logo" class="col-xs-12 col-sm-2">
 				<f:cObject typoscriptObjectPath="lib.logo" />
 			</div>
-			<div id="navigation-main" class="col-xs-12 col-sm-10">
-				<f:cObject typoscriptObjectPath="navigation.main"/></div>
+
+			<div id="header--search" class="col-xs-12 col-sm-7">
+				<form method="get" action="/search/">
+					<input class="form-field" name="q" value="" placeholder="Suchen">
+					<button class="button-icon">
+						Suchen
+					</button>
+				</form>
+			</div>
+
+			<div id="header--actions" class="col-xs-12 col-sm-3">
+				<ul>
+					<li>
+						<nav id="navigation-language">
+							<div>DE</div>
+							<ul>
+								<li>EN</li>
+								<li>CN</li>
+							</ul>
+						</nav>
+					</li>
+					<li>
+						Login
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="inner">
+		<div id="navigation-main">
+			<f:cObject typoscriptObjectPath="navigation.main"/>
 		</div>
 	</div>
 </div>
