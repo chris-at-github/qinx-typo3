@@ -48,7 +48,16 @@ body {
 
 #logo {
 	a {
-		line-height: 64px;
+		padding: 10px 20px;
+		display: block;
+		line-height: 50px;
+	}
+
+	svg {
+		position: relative;
+		top: -2px;
+		line-height: 1;
+		vertical-align: middle;
 	}
 }
 
