@@ -1,10 +1,14 @@
 {namespace qx=Qinx\Qxgo\ViewHelpers}
 
+<f:debug><f:cObject typoscriptObjectPath="lib.url.home"/></f:debug>
+
 <div id="header" class="outer outer--lining">
 	<div class="inner">
 		<div class="row">
 			<div id="logo" class="col-xs-12 col-sm-2">
-				<qx:sprite symbol="logo" width="180" height="51" />
+				<a href="{f:cObject(typoscriptObjectPath: 'lib.url.home')}" title="{f:translate(key: 'LLL:EXT:qxgo/Resources/Private/Language/locallang.xlf:layout.logo.title')}">
+					<qx:sprite symbol="logo" width="180" height="51" />
+				</a>
 			</div>
 
 			<div id="header--search" class="col-xs-12 col-sm-7">
