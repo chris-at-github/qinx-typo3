@@ -18,3 +18,8 @@ input[type='text'], input[type='password'], textarea, select {
 		color: darken($grey-light, 20%);
 	}
 }
+
+.form-label {
+	padding: 0 3px 3px 3px;
+	font-weight: 400;
+}
