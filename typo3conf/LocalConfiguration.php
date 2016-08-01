@@ -45,6 +45,7 @@ return [
             'qxnewsletter' => 'a:0:{}',
             'qxsandbox' => 'a:0:{}',
             'qxsurvey' => 'a:0:{}',
+            'qxwork' => 'a:0:{}',
             'realurl' => 'a:5:{s:10:"configFile";s:34:"typo3conf/RealurlConfiguration.php";s:14:"enableAutoConf";s:1:"0";s:14:"autoConfFormat";s:1:"0";s:12:"enableDevLog";s:1:"0";s:19:"enableChashUrlDebug";s:1:"0";}',
             'reports' => 'a:0:{}',
             'rsaauth' => 'a:1:{s:18:"temporaryDirectory";s:0:"";}',

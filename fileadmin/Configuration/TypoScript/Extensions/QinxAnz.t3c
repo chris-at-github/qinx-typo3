@@ -1,7 +1,0 @@
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:qxanz/Configuration/TypoScript/constants.txt">
-
-plugin.tx_qxanz {
-	persistence {
-		storagePid = 13
-	}
-}
