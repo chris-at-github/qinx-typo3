@@ -16,6 +16,8 @@
 @import 'Qinx/message';
 @import 'Qinx/list';
 
+@import 'form';
+
 // Layout
 // ---------------------------------------------------------------------------------------------------------------------
 body {
@@ -35,7 +37,14 @@ body {
 }
 
 .inner {
-	background: $white;
+	& {
+		background: $white;
+	}
+
+	&.indent-normal {
+		max-width: 100%;
+		padding: 0 20px;
+	}
 }
 
 // Header

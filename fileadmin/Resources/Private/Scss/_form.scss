@@ -1,0 +1,20 @@
+// ----------------------------------------------------------------------------------
+// Forms
+input[type='text'], input[type='password'], textarea, select {
+	& {
+		padding: 8px 12px;
+		line-height: 22px;
+		border: 0;
+		background: $grey-light;
+		color: darken($grey-light, 45%);
+		border-radius: $border-radius-default;
+	}
+
+	&:focus {
+		color: $grey-dark;
+	}
+
+	&.disabled {
+		color: darken($grey-light, 20%);
+	}
+}
