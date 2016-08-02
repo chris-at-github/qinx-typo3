@@ -1,7 +1,8 @@
-// ----------------------------------------------------------------------------------
 // Forms
+// ---------------------------------------------------------------------------------------------------------------------
 input[type='text'], input[type='password'], textarea, select {
 	& {
+		min-height: 38px;
 		padding: 8px 12px;
 		line-height: 22px;
 		border: 0;
@@ -24,8 +25,8 @@ input[type='text'], input[type='password'], textarea, select {
 	font-weight: 400;
 }
 
-// ---------------------------------------------------------------------------------------------------------------------
 // Form Group
+// ---------------------------------------------------------------------------------------------------------------------
 .form-field-group {
 	& {
 		background: $grey-light;
@@ -40,5 +41,30 @@ input[type='text'], input[type='password'], textarea, select {
 	.form-field-suffix {
 		padding: 0 12px;
 		text-align: center;
+	}
+}
+
+// Button
+// ---------------------------------------------------------------------------------------------------------------------
+input[type='submit'], button, .button {
+	& {
+		min-height: 38px;
+		margin: 0;
+		padding: 8px 24px;
+		line-height: 22px;
+		border: 0;
+		border-radius: $border-radius-default;
+		background: darken($grey-light, 20%);
+		font: inherit;
+		font-weight: normal;
+		color: $black;
+		vertical-align: top;
+		cursor: pointer;
+	}
+
+	&:hover, &:focus, &:active {
+		background-color: darken($grey-light, 15%);
+		color: $white;
+		text-decoration: none;
 	}
 }
