@@ -43,6 +43,50 @@
 	</div>
 </div>
 
+<div class="outer">
+	<div class="inner indent-normal">
+
+		<form method="get" action="." style="max-width: 500px; padding: 20px 0;">
+			<div class="form-item">
+				<label for="txt-test" class="form-label">Testeintrag</label>
+				<input type="text" class="form-field" name="test" id="txt-test" value="AN1935: Biallo Relaunch 2016">
+			</div>
+
+			<div class="form-item">
+				<label for="txt-test-disabled" class="form-label">Testeintrag</label>
+				<input type="text" class="form-field disabled" name="test" id="txt-test-disabled" value="AN1935: Biallo Relaunch 2016" disabled="disabled">
+			</div>
+
+			<div class="form-item">
+				<label for="txt-test-group" class="form-label">Testeintrag</label>
+				<div class="form-field-group">
+					<input type="text" class="form-field" name="test" id="txt-test-group" value="AN1935: Biallo Relaunch 2016">
+					<div class="form-field-suffix">AN</div>
+				</div>
+			</div>
+
+			<div class="form-item">
+				<label for="txt-test-group-button" class="form-label">Testeintrag</label>
+				<div class="form-field-group">
+					<input type="text" class="form-field" name="test" id="txt-test-group-button" value="AN1935: Biallo Relaunch 2016">
+					<div class="form-field-suffix">
+						<button class="button" type="submit">
+							Suchen
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-actions">
+				<button type="submit">Speichern</button>
+			</div>
+
+			<span class="icon icon-magnifier"></span>
+		</form>
+
+	</div>
+</div>
+
 <f:render section="Content" />
 
 <div id="footer" class="outer">
