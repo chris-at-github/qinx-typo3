@@ -41,7 +41,7 @@ var folders = {
 	source: {
 		scss: ['./typo3conf/ext/qxgo/Resources/Private/Scss/*.scss', './fileadmin/Resources/Private/Scss/*.scss', './fileadmin/Resources/Private/Scss/Extensions/*.scss'],
 		js:   ['./fileadmin/Resources/Private/Js/*.js', './fileadmin/Resources/Private/Js/**/*.js'],
-		font: ['./fileadmin/Resources/Private/Svg/Optimized/*.svg'],
+		font: ['./fileadmin/Resources/Private/Svg/Font/*.svg'],
 		svg: './fileadmin/Resources/Private/Svg'
 	},
 	target: {
@@ -124,15 +124,15 @@ gulp.task('svg-sprite', ['svg-optimize'], function() {
 					dest: '.',
 					render		: {
 
-						// @see: https://www.liquidlight.co.uk/blog/article/creating-svg-sprites-using-gulp-and-sass/
-						scss: {
-							dest: "_sprite.scss",
-							template: "./fileadmin/Resources/Private/Build/template.scss"
-						},
-						json: {
-							dest: "_sprite.json",
-							template: "./fileadmin/Resources/Private/Build/template.json"
-						}
+						// // @see: https://www.liquidlight.co.uk/blog/article/creating-svg-sprites-using-gulp-and-sass/
+						// scss: {
+						// 	dest: "_sprite.scss",
+						// 	template: "./fileadmin/Resources/Private/Build/template.scss"
+						// },
+						// json: {
+						// 	dest: "_sprite.json",
+						// 	template: "./fileadmin/Resources/Private/Build/template.json"
+						// }
 					}
 				}
 			},
