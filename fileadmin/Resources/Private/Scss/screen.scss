@@ -4,19 +4,20 @@
 
 @import 'variables';
 @import 'scaffolding';
-@import 'icons';
 
+@import 'Qinx/mixins';
 @import 'Qinx/grid';
-@import 'Qinx/form';
 @import 'Qinx/navigation';
-@import 'Qinx/scaffolding';
 @import 'Qinx/csc';
 @import 'Qinx/helper';
 @import 'Qinx/structure';
 @import 'Qinx/message';
 @import 'Qinx/list';
 
+@import 'icons';
 @import 'form';
+
+@import 'Extensions/qxwork';
 
 // Layout
 // ---------------------------------------------------------------------------------------------------------------------

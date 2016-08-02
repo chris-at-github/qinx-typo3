@@ -1,0 +1,29 @@
+// Board
+// ---------------------------------------------------------------------------------------------------------------------
+
+
+// Container
+// ---------------------------------------------------------------------------------------------------------------------
+.container--outer {
+	max-width: 100%;
+	overflow: auto;
+}
+
+.container--inner {
+	width: 10000px;
+	min-height: 800px;
+	margin: 10px -10px 0 -10px;
+}
+
+.container {
+	& {
+		width: 350px;
+		float: left;
+		margin: 0 10px;
+	}
+
+	.container--header {
+		padding: 8px 3px;
+		border-bottom: 1px solid $grey-light;
+	}
+}
