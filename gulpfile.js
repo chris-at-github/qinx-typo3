@@ -148,7 +148,7 @@ gulp.task('svg-sprite', ['svg-optimize'], function() {
 });
 
 gulp.task('iconfont', ['svg-optimize'], function() {
-	return gulp.src(folders.source.svg + '/Optimized/*.svg')
+	return gulp.src(folders.source.font)
 		.pipe(plumber({
 			errorHandler: onError
 		}))
