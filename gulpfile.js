@@ -40,7 +40,7 @@ var onError = function(err) {
 var folders = {
 	source: {
 		scss: ['./typo3conf/ext/qxgo/Resources/Private/Scss/*.scss', './fileadmin/Resources/Private/Scss/*.scss', './fileadmin/Resources/Private/Scss/Extensions/*.scss'],
-		js:   ['./fileadmin/Resources/Private/Js/*.js', './fileadmin/Resources/Private/Js/**/*.js'],
+		js:   ['./fileadmin/Resources/Private/Js/*.js', './fileadmin/Resources/Private/Js/**/*.js', './typo3conf/ext/qxwork/Resources/Private/Js/*.js'],
 		font: ['./fileadmin/Resources/Private/Svg/Font/*.svg'],
 		svg: './fileadmin/Resources/Private/Svg'
 	},

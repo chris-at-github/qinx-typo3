@@ -10,8 +10,8 @@
 }
 
 .container--inner {
-	width: 10000px;
-	min-height: 800px;
+	width: 3500px;
+	min-height: 300px;
 	margin: 10px -10px 0 -10px;
 }
 
@@ -24,6 +24,19 @@
 
 	.container--header {
 		padding: 8px 3px;
-		border-bottom: 1px solid $grey-light;
+		border-bottom: 1px solid lighten($grey, 20%);
+	}
+}
+
+// Card
+// ---------------------------------------------------------------------------------------------------------------------
+.card {
+	& {
+		margin: 10px 0 0 0;
+		background: $white;
+	}
+
+	.card--header {
+		padding: 5px 3px;
 	}
 }
