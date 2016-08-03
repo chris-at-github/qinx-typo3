@@ -29,25 +29,6 @@ input[type='text'], input[type='password'], textarea, select {
 	font-weight: 400;
 }
 
-// Form Group
-// ---------------------------------------------------------------------------------------------------------------------
-.form-field-group {
-	& {
-		background: $grey-light;
-		border-radius: $border-radius-default;
-	}
-
-	.form-field {
-		background: none;
-		border-radius: 0;
-	}
-
-	.form-field-suffix {
-		padding: 0;
-		text-align: center;
-	}
-}
-
 // Button
 // ---------------------------------------------------------------------------------------------------------------------
 input[type='submit'], button, .button {
@@ -60,5 +41,45 @@ input[type='submit'], button, .button {
 	}
 
 	&:hover, &:focus, &:active {
+	}
+}
+
+.button-icon {
+	& {
+		padding: 8px 0;
+	}
+
+
+	&:hover, &:focus, &:active {
+		color: $grey-dark;
+	}
+}
+
+// Form Group
+// ---------------------------------------------------------------------------------------------------------------------
+.form-field-group {
+	& {
+		background: $grey-light;
+		border-radius: $border-radius-default;
+	}
+
+	.form-field, .button {
+		background: none;
+		border-radius: 0;
+	}
+
+	.form-field-suffix {
+		padding: 0;
+		text-align: center;
+	}
+
+	.button-icon {
+		& {
+			color: darken($grey-light, 45%);
+		}
+
+		&:hover,	&:focus {
+			color: $grey-dark;
+		}
 	}
 }
