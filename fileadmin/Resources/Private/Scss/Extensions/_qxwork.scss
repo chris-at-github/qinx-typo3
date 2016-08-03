@@ -1,3 +1,9 @@
+.qx-work {
+	& {
+		padding: 10px 0;
+	}
+}
+
 // Board
 // ---------------------------------------------------------------------------------------------------------------------
 
@@ -12,7 +18,7 @@
 .container--inner {
 	width: 3500px;
 	min-height: 300px;
-	margin: 10px -10px 0 -10px;
+	margin: 0 -10px 0 -10px;
 }
 
 .container {
@@ -24,7 +30,7 @@
 
 	.container--header {
 		padding: 8px 3px;
-		border-bottom: 1px solid lighten($grey, 20%);
+		border-bottom: 2px solid $grey-light;
 	}
 }
 
@@ -33,7 +39,7 @@
 .card {
 	& {
 		margin: 10px 0 0 0;
-		background: $white;
+		background: $grey-light;
 	}
 
 	.card--header {
