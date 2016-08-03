@@ -43,7 +43,7 @@
 	</div>
 </div>
 
-<f:comment>
+
 <div class="outer">
 	<div class="inner indent-normal">
 
@@ -78,16 +78,28 @@
 				</div>
 			</div>
 
-			<div class="form-actions">
-				<button type="submit">Speichern</button>
+			<div class="form-item">
+				<label for="txt-test-group-button-icon" class="form-label">Testeintrag</label>
+				<div class="form-field-group">
+					<input type="text" class="form-field" name="test" id="txt-test-group-button-icon"
+								 value="AN1935: Biallo Relaunch 2016">
+					<div class="form-field-suffix">
+						<button type="submit" class="button-icon icon-magnifier"></button>
+					</div>
+				</div>
 			</div>
 
-			<span class="icon icon-magnifier"></span>
+			<div class="form-actions">
+				<button type="submit" class="button">Speichern</button>
+				<button type="submit" class="button-icon icon-magnifier"></button>
+			</div>
+
+
 		</form>
 
 	</div>
 </div>
-</f:comment>
+<f:comment></f:comment>
 
 <f:render section="Content" />
 
