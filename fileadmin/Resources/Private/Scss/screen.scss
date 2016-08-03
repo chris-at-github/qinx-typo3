@@ -35,6 +35,12 @@ body {
 	&.outer--lining {
 		margin-bottom: 4px;
 	}
+
+	&.outer--transparent {
+		.inner {
+			background: transparent;
+		}
+	}
 }
 
 .inner {
