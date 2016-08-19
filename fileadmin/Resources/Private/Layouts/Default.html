@@ -9,12 +9,18 @@
 				</a>
 			</div>
 
-			<div id="header--search" class="col-xs-12 col-sm-7">
-				<form method="get" action="/search/">
-					<input class="form-field" name="q" value="" placeholder="Suchen">
-					<button class="button-icon">
-						Suchen
-					</button>
+			<div id="header--search" class="col-xs-12 col-sm-push-1 col-sm-7">
+				<form method="get" action="{f:cObject(typoscriptObjectPath: 'lib.url.search')}">
+
+					<div class="form-item">
+						<div class="form-field-group">
+							<f:form.textfield class="form-field" name="q" value="{f:cObject(typoscriptObjectPath: 'lib.variable', data: 'q')}" placeholder="{f:translate(key: 'LLL:EXT:qxgo/Resources/Private/Language/locallang.xlf:layout.search.placeholder')}" />
+							<div class="form-field-suffix">
+								<button type="submit" class="button button-icon icon-magnifier" title="{f:translate(key: 'LLL:EXT:qxgo/Resources/Private/Language/locallang.xlf:layout.search.submit')}"></button>
+							</div>
+						</div>
+					</div>
+
 				</form>
 			</div>
 
