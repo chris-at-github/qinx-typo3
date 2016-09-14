@@ -62,6 +62,8 @@ config {
 	contentObjectExceptionHandler = 0
 }
 
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:qxnewsletter/Configuration/TypoScript/setup.txt">
+
 lib.content < styles.content.get
 
 page = PAGE
