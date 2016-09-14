@@ -82,6 +82,10 @@ return [
             'TYPO3\CMS\Install\Updates\ProcessedFileChecksumUpdate' => 1,
         ],
     ],
+    'MAIL' => [
+        'defaultMailFromAddress' => 'no-reply@qinx.local',
+        'defaultMailFromName' => 'Qinx',
+    ],
     'SYS' => [
         'caching' => [
             'cacheConfigurations' => [
